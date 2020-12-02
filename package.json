@@ -1,19 +1,20 @@
 {
-  "name": "@aarmora/package-to-publish",
-  "version": "1.0.6",
-  "description": "Testing github packages.",
-  "main": "./dist/index.js",
-  "scripts": {
-    "prepublish": "rm -rf ./dist && tsc && npm --no-git-tag-version version patch"
-  },
-  "author": "Jordan Hansen",
-  "license": "ISC",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:aarmora/package-to-publish.git"
-  },
-  "types": "./dist/index.d.ts"
+    "name": "@aarmora/package-to-publish",
+    "version": "1.0.7",
+    "description": "Testing github packages.",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "prepublish": "rm -rf ./dist && npm run build && npm --no-git-tag-version version patch"
+    },
+    "author": "Jordan Hansen",
+    "license": "ISC",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:aarmora/package-to-publish.git"
+    },
+    "types": "./dist/index.d.ts"
 }
