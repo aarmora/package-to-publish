@@ -1,3 +1,7 @@
 
 
-console.log('It is your birthday.');
+
+export function birthday(name: string) {
+
+    return `It is your birthday, ${name}`;
+}
